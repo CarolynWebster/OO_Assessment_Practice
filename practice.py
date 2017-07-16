@@ -28,8 +28,11 @@ class Question(object):
 
         self.question = question
 
-        #stores answer in lowercase to reduce wrong answers based on capitzliation
-        self.correct_answer = answer.lower()
+        # stores answer in lowercase to reduce wrong answers based on capitzliation
+        self.correct_answer = answer
+
+        # had to remove bc it caused error in part 1 test
+        # self.correct_answer = answer.lower()
 
     # asks a question and checks if the answer is correct
     def ask_and_evaluate(self):
@@ -38,8 +41,9 @@ class Question(object):
         #take in raw input of user answer
         answer = raw_input(self.question + " > ")
 
-        #makes answer lowercase to reduce wrong answers based on capitalization
-        answer = answer.lower()
+        # makes answer lowercase to reduce wrong answers based on capitalization
+        # had to remove bc it caused error in part 1 test
+        # answer = answer.lower()
 
         #create var to check if answer is right or wrong
         result = False
